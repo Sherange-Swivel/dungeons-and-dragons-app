@@ -1,7 +1,7 @@
 import React from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { MdFavoriteBorder } from "react-icons/md";
-import { SpellCardInterface } from "../../types/SpellCardInterface";
+import { SpellCardInterface } from "../../types/spellCardInterface";
 
 const SpellCard = (props: SpellCardInterface) => {
   

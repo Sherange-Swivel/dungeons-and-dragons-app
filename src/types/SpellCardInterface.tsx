@@ -1,9 +1,4 @@
-export interface Spell {
-  index: string;
-  name: string;
-  url: string;
-}
-
+import { Spell } from "./spellInterface";
 export interface SpellCardInterface {
   spell: Spell;
   index: number;

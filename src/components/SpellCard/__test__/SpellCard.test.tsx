@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Spell } from "../../../types/SpellCardInterface";
+import { Spell } from "../../../types/spellInterface";
 import SpellCard from "../SpellCard";
 
 test("renders card component", () => {

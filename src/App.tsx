@@ -1,12 +1,14 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Todo App</h1>
-    </div>
+    <Provider store={store}>
+      <div className="spell-app"></div>
+    </Provider>
   );
-}
+};
 
 export default App;
