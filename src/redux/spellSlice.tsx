@@ -22,6 +22,7 @@ export const spellSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { setSpellList, setSpellDetails } = spellSlice.actions;
+export const { setSpellList, setSpellDetails } =
+  spellSlice.actions;
 
 export default spellSlice.reducer;

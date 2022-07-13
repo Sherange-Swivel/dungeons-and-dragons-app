@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { GridLoader } from "react-spinners";
 import { baseUrl, endPoints } from "../constants/appConsts";
@@ -17,9 +17,12 @@ const SpellDetailPage = () => {
   const fetchSpellDetails = async () => {
     try {
       setIsloading(true);
-      const responce = await axios.get(baseUrl + endPoints.spells + spellIndex, {
-        headers: { Accept: "application/json" },
-      });
+      const responce = await axios.get(
+        baseUrl + endPoints.spells + spellIndex,
+        {
+          headers: { Accept: "application/json" },
+        }
+      );
       if (responce && responce.status === 200) {
         dispatch(setSpellDetails(responce.data));
         setIsloading(false);
@@ -39,9 +42,11 @@ const SpellDetailPage = () => {
     </div>
   );
 
-  const renderContent = () => <div>
-    <SpellDetailCard/>
-  </div>;
+  const renderContent = () => (
+    <div>
+      <SpellDetailCard />
+    </div>
+  );
 
   return (
     <div data-testid="spell-detail-element">

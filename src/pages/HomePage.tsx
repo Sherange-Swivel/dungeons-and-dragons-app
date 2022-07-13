@@ -31,7 +31,6 @@ const HomePage = () => {
 
   const searchSpells = async (input: string) => {
     try {
-     
       const responce = await axios.get(
         baseUrl + endPoints.spells + `/?name=${input}`,
         {
