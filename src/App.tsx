@@ -11,6 +11,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <div className="spell-app" data-testid="app-element">
+        <h1>Dungeons and Dragons - SPELLS</h1>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/spells" element={<SpellDetailPage />} />

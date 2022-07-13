@@ -29,10 +29,8 @@ h1 {
 }
 
 .search-form {
-  /* margin-bottom: 32px;
-  margin-top: 32px; */
-  margin: 32px auto;
-  position: fixed;
+  margin-top: 10px;
+  /* position: fixed; */
 }
 
 .search-input {
@@ -73,7 +71,7 @@ h1 {
   padding: 16px 22px;
 }
 .card-list {
-  padding-top: 100px;
+  /* padding-top: 100px; */
 }
 
 .card-row {
