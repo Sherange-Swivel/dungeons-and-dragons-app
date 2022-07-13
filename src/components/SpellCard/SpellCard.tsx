@@ -1,5 +1,4 @@
 import React from "react";
-import { RiCloseCircleLine } from "react-icons/ri";
 import { MdFavoriteBorder } from "react-icons/md";
 import { SpellCardInterface } from "../../types/spellCardInterface";
 
@@ -11,7 +10,6 @@ const SpellCard = (props: SpellCardInterface) => {
     <div className="card-row" key={index} onClick={() => {}} data-testid="card-element">
       <div>{spell.name}</div>
       <div className="icons">
-        <RiCloseCircleLine onClick={() => {}} className="delete-icon" />
         <MdFavoriteBorder onClick={() => {}} className="fav-icon" />
         
       </div>
