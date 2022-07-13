@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { SpellSearchInterface } from "../../types/spellSearchInterface";
 
-const SpellSearch = () => {
+const SpellSearch = (props: SpellSearchInterface) => {
+  const { handleSearch } = props;
   const [input, setInput] = useState("");
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
+    handleSearch(input);
   };
 
   const handleChange = (event: any) => {
@@ -18,7 +21,6 @@ const SpellSearch = () => {
           type="text"
           placeholder="Search Spell"
           value={input}
-          name="text"
           className="search-input"
           onChange={handleChange}
         />

@@ -17,7 +17,7 @@ const HomePage = () => {
     try {
       setIsloading(true);
       const responce = await axios.get(baseUrl + endPoints.spells, {
-        headers: { Authorization: "Bearer Wookie2019" },
+        headers: { Accept: "application/json" },
       });
       if (responce && responce.status === 200) {
         const { results } = responce.data;
@@ -29,9 +29,27 @@ const HomePage = () => {
     }
   };
 
+  const searchSpells = async (input: string) => {
+    try {
+     
+      const responce = await axios.get(
+        baseUrl + endPoints.spells + `/?name=${input}`,
+        {
+          headers: { Accept: "application/json" },
+        }
+      );
+      if (responce && responce.status === 200) {
+        const { results } = responce.data;
+        dispatch(setSpellList(results));
+      }
+    } catch (error) {
+      setIsloading(false);
+    }
+  };
+
   const renderContent = () => (
     <div>
-      <SpellSearch />
+      <SpellSearch handleSearch={searchSpells} />
       <CardList />
     </div>
   );
