@@ -10,13 +10,13 @@ export const spellSlice = createSlice({
   name: "spell",
   initialState,
   reducers: {
-    setSpellList: (state, action : PayloadAction<Array<Spell>>)=> {
+    setSpellList: (state, action: PayloadAction<Array<Spell>>) => {
       state.spellList = action.payload;
-    }
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const {setSpellList} = spellSlice.actions;
+export const { setSpellList } = spellSlice.actions;
 
 export default spellSlice.reducer;

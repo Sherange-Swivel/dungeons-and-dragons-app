@@ -132,3 +132,9 @@ h1 {
 .fav-icon {
   color: #fff;
 }
+.app-loader {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
