@@ -14,7 +14,7 @@ const App = () => {
         <h1>Dungeons and Dragons - SPELLS</h1>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/spells" element={<SpellDetailPage />} />
+          <Route path="/spells/:spellIndex" element={<SpellDetailPage />} />
         </Routes>
       </div>
     </Provider>
